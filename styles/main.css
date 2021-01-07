@@ -1,0 +1,68 @@
+header {
+    background-color: rgb(203, 202, 250);
+    display: flex;
+  }
+
+.fishCard {
+    border: 2px dotted black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 48%; 
+  }
+  
+ .fishCard {
+   text-align: left;
+ }
+
+}
+  .fishCard__img {
+    width: 25%;
+  }
+
+  .fishCard__name {
+    font-weight: bold;
+  }
+    
+  .containerLeft__fishList {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: space-around;
+    
+  }
+
+    .containerRight {
+        background-color: rgb(119, 224, 184);
+      }
+      .contentArticle {
+        background-color:rgb(151, 115, 250);
+      }
+      
+      .contentContainer {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .containerLeft {
+        flex-basis: 75%;
+      }
+      
+      .containerRight {
+        flex-basis: 25%;
+      }
+    
+    
+     .quoteCard {
+        text-align: center;
+        border: 3px solid black; 
+    }
+
+
+.containerRight {
+ text-align: center;
+}
+.tipsText {
+  text-align: left;
+}
+
