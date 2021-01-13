@@ -4,15 +4,15 @@ header {
   }
 
 .fishCard {
-    border: 2px dotted black;
+    border: 2px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-basis: 48%; 
+    
   }
   
- .fishCard {
-   text-align: left;
+  .fishCard {
+  
  }
 
 }
@@ -26,14 +26,25 @@ header {
     
   .containerLeft__fishList {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    text-align: left;
-    justify-content: space-around;
+    text-align: center;
+    justify-content: left;
     
+  }
+
+  .fishImage {
+    width: 300px;
+    height: 200px;
+    border-radius: 60px;
   }
 
     .containerRight {
         background-color: rgb(119, 224, 184);
+        border-style: solid;
+        border-width: medium;
+        border-color: black;
+       
       }
       .contentArticle {
         background-color:rgb(151, 115, 250);
@@ -44,9 +55,7 @@ header {
         justify-content: space-between;
       }
       
-      .containerLeft {
-        flex-basis: 75%;
-      }
+      
       
       .containerRight {
         flex-basis: 25%;
@@ -65,4 +74,3 @@ header {
 .tipsText {
   text-align: left;
 }
-
