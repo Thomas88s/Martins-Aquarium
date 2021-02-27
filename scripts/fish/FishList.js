@@ -1,39 +1,43 @@
-        /**
-         *  FishList which renders individual fish objects as HTML
-         */
-        import { useFish } from "./FishDataProvider.js"
+       
         import { Fish } from "./Fish.js"
+        import { mostHolyFish, soldierFish, nonHolyFish } from "./FishDataProvider.js"
+
+        const buildFishListHTML = (arrayOfFish, heading) => {
+
+            let fishHTMLRepresentation = <h3>${heading}</h3>
+            for (const fishObj of arrayOfFish) {
+
+                fishHTMLRepresentation += Fish(fishObj)
+                console.log(fishHTMLRepresentation)
+            }
+            return fishHTMLRepresentation
+        }
+        
 
         export const FishList = () => {
-        // TODO: Import `useFish` from the data provider module
-
-            // Get a reference to the `<article class="content">` element
+       
             const contentElement = document.querySelector(".content")
-            const fishes = useFish()
 
-            // Genimport { useFish } from './FishDataProvider.js'
+            const holyFishArray = mostHolyFish()
+            const holyfishHTMLRepresentations = buildFishListHTML(holyFishArray, "Holy Fish")
+            
+            const soldierFishArray = soldierFish()
+            const soldierFishHTMLRepresentations = buildFishListHTML(soldierFishArray, "Soldier Fish") 
 
-        
-        // Generate all of the HTML for all of the fish
-            let fishHTMLRepresentations = ""
-            for (const fish of fishes) {
-
+            const regularFishArray = nonHolyFish()
+            const regularFishHTMLRepresentations = buildFishListHTML(regularFishArray, "Regular Fish")
+            
                 
-                /*
-                    Invoke the Fish component function
-                    and pass the current fish object as an argument.
-                    Each time, add the return value to the
-                    fishHTMLRepresentations variable with `+=`
-                */
-                fishHTMLRepresentations += Fish(fish)
-
-            }
-
-            // Add to the existing HTML in the content element
+                
+           
             contentElement.innerHTML +=`
             
-                <article class= "fishList">
-                ${fishHTMLRepresentations}
+                <article class= "content__fishList contentArticle">
+                ${holyfishHTMLRepresentations}
+                ${soldierFishHTMLRepresentations}
+                ${regularFishHTMLRepresentations}
                 </article>
                 `
             }
+
+
