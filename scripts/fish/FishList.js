@@ -4,7 +4,7 @@
 
         const buildFishListHTML = (arrayOfFish, heading) => {
 
-            let fishHTMLRepresentation = <h3>${heading}</h3>
+            let fishHTMLRepresentation = `<h3>${heading}</h3>`
             for (const fishObj of arrayOfFish) {
 
                 fishHTMLRepresentation += Fish(fishObj)
@@ -26,11 +26,8 @@
 
             const regularFishArray = nonHolyFish()
             const regularFishHTMLRepresentations = buildFishListHTML(regularFishArray, "Regular Fish")
-            
-                
-                
-           
-            contentElement.innerHTML +=`
+             
+           return contentElement.innerHTML +=`
             
                 <article class= "content__fishList contentArticle">
                 ${holyfishHTMLRepresentations}
